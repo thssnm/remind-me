@@ -1,0 +1,13 @@
+A minimalistic app for quick reminders.
+
+<b>Features:</b>
+
+- Set reminders within the next 24 hours
+- Clear list of all pending reminders
+- Swipe-to-delete individual reminders
+- Delete all with confirmation
+- Minimalistic design
+- Fully open source
+- No trackers, no analytics
+
+Perfect for short memory aids in everyday life.
