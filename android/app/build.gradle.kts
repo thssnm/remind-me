@@ -1,9 +1,12 @@
 plugins {
-    id("com.android.application")
-    id("kotlin-android")
-    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
-    id("dev.flutter.flutter-gradle-plugin")
+    id "com.android.application"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
 }
+
+import java.util.Properties
+import java.io.FileInputStream
+
 
 val keystorePropertiesFile = rootProject.file("key.properties")
 val keystoreProperties = Properties()
