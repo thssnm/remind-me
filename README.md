@@ -22,3 +22,7 @@ Enjoying the app? Support future development and new features!
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/thssnm)
 
 Every coffee helps keep this project alive! ☕
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
