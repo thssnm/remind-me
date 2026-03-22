@@ -46,19 +46,23 @@ android {
         applicationId = "com.theissenmatthias.remind_me"
         minSdk = flutter.minSdkVersion
         targetSdk = 35
-        versionCode = 3
-        versionName = "1.0.2"
+        versionCode = 4
+        versionName = "1.0.3"
     }
 
     buildTypes {
-        release {
-            if (useKeystoreSigning) {
-                signingConfig = signingConfigs.getByName("release")
-            }
-            isMinifyEnabled = true
-            isShrinkResources = true
+    release {
+        if (useKeystoreSigning) {
+            signingConfig = signingConfigs.getByName("release")
         }
+        isMinifyEnabled = true
+        isShrinkResources = true
+        proguardFiles(
+            getDefaultProguardFile("proguard-android-optimize.txt"),
+            "proguard-rules.pro"
+        )
     }
+}
 
     compileOptions {
     sourceCompatibility = JavaVersion.VERSION_11
