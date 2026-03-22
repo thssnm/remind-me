@@ -17,7 +17,7 @@ class NotificationService {
 
   static Future<void> init() async {
     const AndroidInitializationSettings androidInitializationSettings =
-        AndroidInitializationSettings("@mipmap/ic_notification");
+        AndroidInitializationSettings("@drawable/ic_notification");
     const DarwinInitializationSettings iOSinizializationSettings =
         DarwinInitializationSettings();
 
@@ -39,8 +39,7 @@ class NotificationService {
     );
 
     await flutterLocalNotificationsPlugin
-        .resolvePlatformSpecificImplementation<
-            AndroidFlutterLocalNotificationsPlugin>()
+        .resolvePlatformSpecificImplementation<AndroidFlutterLocalNotificationsPlugin>()
         ?.requestNotificationsPermission();
   }
 
@@ -51,7 +50,7 @@ class NotificationService {
         "channel_Name",
         importance: Importance.high,
         priority: Priority.high,
-        icon: "@mipmap/ic_notification",
+        icon: "@drawable/ic_notification",
       ),
       iOS: DarwinNotificationDetails(),
     );
@@ -77,7 +76,7 @@ class NotificationService {
         "channel_Name",
         importance: Importance.high,
         priority: Priority.high,
-        icon: "@mipmap/ic_notification",
+        icon: "@drawable/ic_notification",
       ),
       iOS: DarwinNotificationDetails(),
     );
@@ -99,7 +98,6 @@ class NotificationService {
       minute,
     );
 
-    // Speichere Zeit im payload für spätere Anzeige
     final timeString =
         '${hour.toString().padLeft(2, '0')}:${minute.toString().padLeft(2, '0')}';
 
@@ -110,7 +108,7 @@ class NotificationService {
         body,
         scheduledDate,
         platformChannelSpecifics,
-        payload: timeString, // Zeit im payload speichern
+        payload: timeString,
         uiLocalNotificationDateInterpretation:
             UILocalNotificationDateInterpretation.absoluteTime,
         androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
